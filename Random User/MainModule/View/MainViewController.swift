@@ -7,13 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    //MARK: - Properties
 
+    
+    //MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .blue
+        addButton()
     }
 
-
+    //MARK: - Fuctions
+    
+    //adding bar button
+    private func addButton() {
+        let reload = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshPerson))
+        navigationItem.rightBarButtonItem = reload
+    }
+    
+    //get new person from randomuser api on bar button click
+    @objc func refreshPerson() {
+        print("Я обновляюсь")
+    }
 }
 
