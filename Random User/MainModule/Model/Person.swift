@@ -4,6 +4,7 @@
 //
 //  Created by Александр Иванов on 20.03.2022.
 //
+//  Model for decode randomuser api json answer
 
 import Foundation
 

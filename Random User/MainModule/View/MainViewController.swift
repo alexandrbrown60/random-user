@@ -59,7 +59,10 @@ extension MainViewController: MainViewProtocol {
     
     //if get error show alert
     func failure(error: Error) {
-        print(error.localizedDescription)
+        let alert = UIAlertController(title: "Error", message: "Ooops... something goes wrong", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
