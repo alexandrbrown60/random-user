@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     
     //get new person from randomuser api on bar button click
     @objc func refreshPerson() {
-        print("Я обновляюсь")
+        presenter.getPerson()
     }
     
     private func setupPersonView() {
@@ -49,10 +49,15 @@ class MainViewController: UIViewController {
 
 //MARK: - MainViewProtocol extension
 extension MainViewController: MainViewProtocol {
+    //set person to personVeiw
     func success() {
-        print("Успешно")
+        if let person = presenter.person?.results[0] {
+            mainPersonView.setPerson(person)
+        }
+        
     }
     
+    //if get error show alert
     func failure(error: Error) {
         print(error.localizedDescription)
     }

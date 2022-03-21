@@ -9,6 +9,20 @@ import UIKit
 
 final class MainPersonView: UIView {
     //MARK: - Properties
+    private var person: Person? {
+        didSet {
+            if let person = person {
+                profileImageView.image = UIImage(named: "no-photo")
+                fullNameLabel.text = person.name.first + " " + person.name.last
+                genderLabel.text = person.gender
+                locationLabel.text = person.location.country + ", " + person.location.city + ", " + person.location.street.name + " " + String(person.location.street.number)
+                emailLabel.text = person.email
+                phoneLabel.text = person.phone
+            }
+            
+            
+        }
+    }
     private let profileImageView = UIImageView()
     private let leftSpacerView = UIView()
     private let rightSpacerView = UIView()
@@ -43,6 +57,10 @@ final class MainPersonView: UIView {
     }
     
     //MARK: - Functions
+    func setPerson(_ person: Person) {
+        self.person = person
+    }
+    
     private func setupMainStackView() {
         addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false

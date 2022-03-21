@@ -69,9 +69,9 @@
 				1F5699F827E76096009CEF88 /* Assets.xcassets */,
 				1F5699FA27E76096009CEF88 /* LaunchScreen.storyboard */,
 				1F5699FD27E76096009CEF88 /* Info.plist */,
+				1FD2997927E878750018ED0D /* ModelBuilder.swift */,
 				1F569A0527E7656B009CEF88 /* MainModule */,
 				1FD2997827E861A90018ED0D /* ServiceLayer */,
-				1FD2997927E878750018ED0D /* ModelBuilder.swift */,
 			);
 			path = "Random User";
 			sourceTree = "<group>";
