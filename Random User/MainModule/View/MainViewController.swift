@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     //MARK: - Properties
     private let mainPersonView = MainPersonView()
+    var presenter: MainViewPresenterProtocol!
     
     //MARK: - Initialization
     override func viewDidLoad() {
