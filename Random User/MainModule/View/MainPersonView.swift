@@ -12,7 +12,6 @@ final class MainPersonView: UIView {
     private var person: Person? {
         didSet {
             if let person = person {
-                profileImageView.image = UIImage(named: "no-photo")
                 fullNameLabel.text = person.name.first + " " + person.name.last
                 genderLabel.text = person.gender
                 locationLabel.text = person.location.country + ", " + person.location.city + ", " + person.location.street.name + " " + String(person.location.street.number)
@@ -59,6 +58,23 @@ final class MainPersonView: UIView {
     //MARK: - Functions
     func setPerson(_ person: Person) {
         self.person = person
+        setPersonImage()
+    }
+    
+    private func setPersonImage() {
+        DispatchQueue.global().async {
+            
+            guard let pictureUrl = self.person?.picture.large else {
+                return
+            }
+            
+            let url = URL(string: pictureUrl)
+            if let data = try? Data(contentsOf: url!) {
+                DispatchQueue.main.async {
+                    self.profileImageView.image = UIImage(data: data)
+                }
+            }
+        }
     }
     
     private func setupMainStackView() {

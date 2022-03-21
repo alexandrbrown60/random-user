@@ -44,8 +44,6 @@ class MainPresenter: MainViewPresenterProtocol {
                     self.view?.failure(error: error)
                 }
             }
-            
-            
         }
     }
 }
