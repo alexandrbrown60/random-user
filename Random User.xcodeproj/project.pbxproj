@@ -15,6 +15,7 @@
 		1F569A0427E76344009CEF88 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569A0327E76344009CEF88 /* Person.swift */; };
 		1F569A0927E7684D009CEF88 /* MainPresetner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569A0827E7684D009CEF88 /* MainPresetner.swift */; };
 		1F569A0E27E77466009CEF88 /* MainPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569A0D27E77466009CEF88 /* MainPersonView.swift */; };
+		1FD2997727E860C00018ED0D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997627E860C00018ED0D /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1F569A0327E76344009CEF88 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		1F569A0827E7684D009CEF88 /* MainPresetner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresetner.swift; sourceTree = "<group>"; };
 		1F569A0D27E77466009CEF88 /* MainPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPersonView.swift; sourceTree = "<group>"; };
+		1FD2997627E860C00018ED0D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1F5699FA27E76096009CEF88 /* LaunchScreen.storyboard */,
 				1F5699FD27E76096009CEF88 /* Info.plist */,
 				1F569A0527E7656B009CEF88 /* MainModule */,
+				1FD2997827E861A90018ED0D /* ServiceLayer */,
 			);
 			path = "Random User";
 			sourceTree = "<group>";
@@ -103,6 +106,14 @@
 				1F569A0827E7684D009CEF88 /* MainPresetner.swift */,
 			);
 			path = Presentor;
+			sourceTree = "<group>";
+		};
+		1FD2997827E861A90018ED0D /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1FD2997627E860C00018ED0D /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD2997727E860C00018ED0D /* NetworkService.swift in Sources */,
 				1F5699F427E76094009CEF88 /* MainViewController.swift in Sources */,
 				1F5699F027E76094009CEF88 /* AppDelegate.swift in Sources */,
 				1F569A0427E76344009CEF88 /* Person.swift in Sources */,

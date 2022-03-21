@@ -46,3 +46,14 @@ class MainViewController: UIViewController {
     }
 }
 
+//MARK: - MainViewProtocol extension
+extension MainViewController: MainViewProtocol {
+    func success() {
+        print("Успешно")
+    }
+    
+    func failure(error: Error) {
+        print(error.localizedDescription)
+    }
+}
+
