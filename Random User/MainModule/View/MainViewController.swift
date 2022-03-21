@@ -18,6 +18,11 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         addButton()
         setupPersonView()
+        
+        //show alert if user have problems with ethernet
+        if !NetworkMonitor.shared.isConnected {
+            failure()
+        }
     }
 
     //MARK: - Fuctions
@@ -30,7 +35,7 @@ class MainViewController: UIViewController {
     
     //get new person from randomuser api on bar button click
     @objc func refreshPerson() {
-        presenter.getPerson()
+            presenter.getPerson()
     }
     
     private func setupPersonView() {
@@ -45,6 +50,7 @@ class MainViewController: UIViewController {
             mainPersonView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
 }
 
 //MARK: - MainViewProtocol extension
@@ -58,8 +64,8 @@ extension MainViewController: MainViewProtocol {
     }
     
     //if get error show alert
-    func failure(error: Error) {
-        let alert = UIAlertController(title: "Error", message: "Ooops... something goes wrong", preferredStyle: UIAlertController.Style.alert)
+    func failure() {
+        let alert = UIAlertController(title: "Error", message: "Something goes wrong. Check your ethernet connection", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
         self.present(alert, animated: true, completion: nil)

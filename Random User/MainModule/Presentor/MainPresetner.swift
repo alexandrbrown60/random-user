@@ -9,7 +9,7 @@ import Foundation
 
 protocol MainViewProtocol: class {
     func success()
-    func failure(error: Error)
+    func failure()
 }
 
 protocol MainViewPresenterProtocol: class {
@@ -40,8 +40,8 @@ class MainPresenter: MainViewPresenterProtocol {
                 case .success(let person):
                     self.person = person
                     self.view?.success()
-                case .failure(let error):
-                    self.view?.failure(error: error)
+                case .failure:
+                    self.view?.failure()
                 }
             }
         }

@@ -17,6 +17,7 @@
 		1F569A0E27E77466009CEF88 /* MainPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569A0D27E77466009CEF88 /* MainPersonView.swift */; };
 		1FD2997727E860C00018ED0D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997627E860C00018ED0D /* NetworkService.swift */; };
 		1FD2997A27E878750018ED0D /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997927E878750018ED0D /* ModelBuilder.swift */; };
+		1FD2997F27E8921C0018ED0D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997E27E8921C0018ED0D /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1F569A0D27E77466009CEF88 /* MainPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPersonView.swift; sourceTree = "<group>"; };
 		1FD2997627E860C00018ED0D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1FD2997927E878750018ED0D /* ModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBuilder.swift; sourceTree = "<group>"; };
+		1FD2997E27E8921C0018ED0D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1FD2997627E860C00018ED0D /* NetworkService.swift */,
+				1FD2997E27E8921C0018ED0D /* NetworkMonitor.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				1F569A0927E7684D009CEF88 /* MainPresetner.swift in Sources */,
 				1FD2997A27E878750018ED0D /* ModelBuilder.swift in Sources */,
 				1F569A0E27E77466009CEF88 /* MainPersonView.swift in Sources */,
+				1FD2997F27E8921C0018ED0D /* NetworkMonitor.swift in Sources */,
 				1F5699F227E76094009CEF88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
