@@ -56,11 +56,13 @@ final class MainPersonView: UIView {
     }
     
     //MARK: - Functions
+    //public function for inject person
     func setPerson(_ person: Person) {
         self.person = person
         setPersonImage()
     }
     
+    //get imageUrl data and plae it to person avatar
     private func setPersonImage() {
         DispatchQueue.global().async {
             

@@ -11,7 +11,8 @@ protocol Builder {
     static func createMainModule() -> UIViewController
 }
 
-class ModelBuilder: Builder {
+class ModuleBuilder: Builder {
+    //create main module and inject dependencies
     static func createMainModule() -> UIViewController {
         let view = MainViewController()
         let networkService = NetworkService()

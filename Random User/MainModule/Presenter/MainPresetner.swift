@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK: - Protocols
+
 protocol MainViewProtocol: class {
     func success()
     func failure()
@@ -20,19 +22,27 @@ protocol MainViewPresenterProtocol: class {
     func getPerson()
 }
 
+//MARK: - MainPresenter class
+
 class MainPresenter: MainViewPresenterProtocol {
+    //Properties
     weak var view: MainViewProtocol?
     let networkService: NetworkServiceProtocol
     var person: PersonResult?
     
+    
+    //Initialization
     required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.networkService = networkService
         getPerson()
     }
     
+    
+    //Functions
     func getPerson() {
-        networkService.getPerson { [weak self] result in
+        ///trigger urlsession and place result to main queue async
+        self.networkService.getPerson { [weak self] result in
             guard let self = self else { return }
             
             DispatchQueue.main.async {
@@ -44,7 +54,9 @@ class MainPresenter: MainViewPresenterProtocol {
                     self.view?.failure()
                 }
             }
-        }
+            
+       }
+        
     }
 }
 

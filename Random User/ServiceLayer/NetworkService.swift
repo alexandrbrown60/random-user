@@ -14,15 +14,20 @@ protocol NetworkServiceProtocol {
 class NetworkService: NetworkServiceProtocol {
     
     func getPerson(completion: @escaping (Result<PersonResult?, Error>) -> Void) {
+        
         let urlString = "https://randomuser.me/api"
         guard let url = URL(string: urlString) else { return }
         
+        //create urlsession task and resume it
         URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            //return if error
             if let error = error {
                 completion(.failure(error))
                 return
             }
             
+            //return decodeded result in escaping completion
             do {
                 let obj = try JSONDecoder().decode(PersonResult.self, from: data!)
                 completion(.success(obj))
@@ -31,6 +36,7 @@ class NetworkService: NetworkServiceProtocol {
             }
             
         }.resume()
+        
     }
     
     

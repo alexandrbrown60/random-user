@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        //draw button and personView layout
         addButton()
         setupPersonView()
         
@@ -33,9 +35,9 @@ class MainViewController: UIViewController {
         navigationItem.rightBarButtonItem = reload
     }
     
-    //get new person from randomuser api on bar button click
+    //get new person on bar button click
     @objc func refreshPerson() {
-            presenter.getPerson()
+        presenter.getPerson()
     }
     
     private func setupPersonView() {

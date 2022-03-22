@@ -16,7 +16,7 @@
 		1F569A0927E7684D009CEF88 /* MainPresetner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569A0827E7684D009CEF88 /* MainPresetner.swift */; };
 		1F569A0E27E77466009CEF88 /* MainPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569A0D27E77466009CEF88 /* MainPersonView.swift */; };
 		1FD2997727E860C00018ED0D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997627E860C00018ED0D /* NetworkService.swift */; };
-		1FD2997A27E878750018ED0D /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997927E878750018ED0D /* ModelBuilder.swift */; };
+		1FD2997A27E878750018ED0D /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997927E878750018ED0D /* ModuleBuilder.swift */; };
 		1FD2997F27E8921C0018ED0D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2997E27E8921C0018ED0D /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		1F569A0827E7684D009CEF88 /* MainPresetner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresetner.swift; sourceTree = "<group>"; };
 		1F569A0D27E77466009CEF88 /* MainPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPersonView.swift; sourceTree = "<group>"; };
 		1FD2997627E860C00018ED0D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		1FD2997927E878750018ED0D /* ModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBuilder.swift; sourceTree = "<group>"; };
+		1FD2997927E878750018ED0D /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		1FD2997E27E8921C0018ED0D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 			children = (
 				1F5699EF27E76094009CEF88 /* AppDelegate.swift */,
 				1F5699F127E76094009CEF88 /* SceneDelegate.swift */,
-				1FD2997927E878750018ED0D /* ModelBuilder.swift */,
+				1FD2997927E878750018ED0D /* ModuleBuilder.swift */,
 				1F569A0527E7656B009CEF88 /* MainModule */,
 				1FD2997827E861A90018ED0D /* ServiceLayer */,
 				1F5699FD27E76096009CEF88 /* Info.plist */,
@@ -82,7 +82,7 @@
 			children = (
 				1F569A0627E76578009CEF88 /* Model */,
 				1F569A0727E76595009CEF88 /* View */,
-				1F569A0A27E7693A009CEF88 /* Presentor */,
+				1F569A0A27E7693A009CEF88 /* Presenter */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -104,12 +104,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1F569A0A27E7693A009CEF88 /* Presentor */ = {
+		1F569A0A27E7693A009CEF88 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				1F569A0827E7684D009CEF88 /* MainPresetner.swift */,
 			);
-			path = Presentor;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		1FD2997827E861A90018ED0D /* ServiceLayer */ = {
@@ -205,7 +205,7 @@
 				1F5699F027E76094009CEF88 /* AppDelegate.swift in Sources */,
 				1F569A0427E76344009CEF88 /* Person.swift in Sources */,
 				1F569A0927E7684D009CEF88 /* MainPresetner.swift in Sources */,
-				1FD2997A27E878750018ED0D /* ModelBuilder.swift in Sources */,
+				1FD2997A27E878750018ED0D /* ModuleBuilder.swift in Sources */,
 				1F569A0E27E77466009CEF88 /* MainPersonView.swift in Sources */,
 				1FD2997F27E8921C0018ED0D /* NetworkMonitor.swift in Sources */,
 				1F5699F227E76094009CEF88 /* SceneDelegate.swift in Sources */,
